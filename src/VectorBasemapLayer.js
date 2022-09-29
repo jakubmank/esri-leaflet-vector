@@ -47,7 +47,7 @@ export var VectorBasemapLayer = Layer.extend({
    * Creates the maplibreGLJSLayer given using "this.options"
    */
   _createLayer: function () {
-    var styleUrl = getBasemapStyleUrl(this.options.key, this.options.apikey);
+    var styleUrl = getBasemapStyleUrl(this.options.key, this.options.apikey, this.options.customUrl);
 
     this._maplibreGL = maplibreGLJSLayer({
       style: styleUrl,
